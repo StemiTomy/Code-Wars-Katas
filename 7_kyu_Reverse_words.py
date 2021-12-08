@@ -22,3 +22,7 @@ def reverse_words(text):
         s += word+" "
     s = s[:-1]
     return s
+
+# la mejor solucion:
+def reverse_words2(str):
+    return ' '.join(s[::-1] for s in str.split(' '))
