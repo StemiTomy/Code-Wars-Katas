@@ -26,3 +26,10 @@ public class isogram {
       return true;
   } 
 }
+
+// la mejor solución:
+public class isogram2 {
+  public static boolean  isIsogram(String str) {
+    return str.length() == str.toLowerCase().chars().distinct().count();
+  } 
+}
