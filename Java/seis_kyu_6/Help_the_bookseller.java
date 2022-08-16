@@ -1,3 +1,5 @@
+package seis_kyu_6;
+
 /*
 6 kyu Help the bookseller !
 
@@ -37,39 +39,42 @@ Note:
 In the result codes and their values are in the same order as in M.
 */
 
-public class StockList { 
-	
-  // 1st parameter is the stocklist (L in example), 
-	// 2nd parameter is list of categories (M in example)
-	public static String stockSummary(String[] lstOfArt, String[] lstOf1stLetter) {
+public class Help_the_bookseller {
+
+  // 1st parameter is the stocklist (L in example),
+  // 2nd parameter is list of categories (M in example)
+  public static String stockSummary(String[] lstOfArt, String[] lstOf1stLetter) {
     String s = "";
     int i = 0;
-    
+
     for (String letra : lstOf1stLetter) {
       i++;
-      s += "("+letra+" : ";
-      
+      s += "(" + letra + " : ";
+
       int totalLibros = 0;
-      
+
       for (String libro : lstOfArt) {
-        if (letra.charAt(0) == libro.charAt(0)){
+        if (letra.charAt(0) == libro.charAt(0)) {
           // quitamos todo lo que no sean numeros
           String numeroLibros = libro.replaceAll("[^0-9]", "");
           // lo sumamos
           totalLibros += Integer.parseInt(numeroLibros);
         }
       }
-      s += totalLibros+")";
-      
+      s += totalLibros + ")";
+
       // si hay más letras
-      if (i<lstOf1stLetter.length) s += " - ";
+      if (i < lstOf1stLetter.length)
+        s += " - ";
     }
-    
+
     // si no hay letras en la lista de letras
-    if (lstOf1stLetter.length == 0) return "";
+    if (lstOf1stLetter.length == 0)
+      return "";
     // si se da que todas las letras tienen 0 libros
-    if (Integer.parseInt(s.replaceAll("[^0-9]", "")) == 0) return "";
+    if (Integer.parseInt(s.replaceAll("[^0-9]", "")) == 0)
+      return "";
     // sino:
-		return s;
-	}
+    return s;
+  }
 }

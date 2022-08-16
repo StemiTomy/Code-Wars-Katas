@@ -1,5 +1,6 @@
-// solucion a kata nivel 6 "Who likes it?"
-class Solution {
+package seis_kyu_6;
+
+public class Who_likes_it {
     public static String whoLikesIt(String... names) {
         //Do your magic here
         if (names.length == 0){

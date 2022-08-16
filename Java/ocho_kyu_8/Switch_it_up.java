@@ -1,4 +1,5 @@
-package ocho_kyu;
+package ocho_kyu_8;
+
 /*
 When provided with a number between 0-9, return it in words.
 
@@ -9,7 +10,7 @@ Output :: "One".
 If your language supports it, try using a switch statement.
 */
 
-public class ocho_kyu_Switch_it_up {
+public class Switch_it_up {
     public class Kata {
         public static String switchItUp(int number) {
             switch (number) {

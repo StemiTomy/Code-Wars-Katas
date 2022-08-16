@@ -1,3 +1,5 @@
+package seis_kyu_6;
+
 /*
 In this kata you have to write a simple Morse code decoder. While the Morse code is now mostly superseded by voice and digital data communication channels, it still has its use in some applications around the world.
 The Morse code encodes every character as a sequence of "dots" and "dashes". For example, the letter A is coded as ·−, letter Q is coded as −−·−, and digit 1 is coded as ·−−−−. The Morse code is case-insensitive, traditionally capital letters are used. When the message is written in Morse code, a single space is used to separate the character codes and 3 spaces are used to separate words. For example, the message HEY JUDE in Morse code is ···· · −·−−   ·−−− ··− −·· ·.
@@ -37,10 +39,10 @@ Good luck!
 After you complete this kata, you may try yourself at Decode the Morse code, advanced.
 */
 
-public class seis_kyu_decode_the_morse_code {
-    // mejor solucion:
-    public class MorseCodeDecoder2 {
-        public static String decode(String morseCode) {
+public class Decode_the_morse_code {
+    // mejor solucion (DA ERROR PORQUE EL MoreseCode estaba dentro del ejercicio):
+    class MorseCodeDecoder2 {
+        static String decode(String morseCode) {
             String result = "";
             for (String word : morseCode.trim().split("   ")) {
                 for (String letter : word.split("\\s+")) {
@@ -53,8 +55,8 @@ public class seis_kyu_decode_the_morse_code {
     }
 
     // mi solucion MALISIMA!
-    public class MorseCodeDecoder {
-        public static String decode(String morseCode) {
+    class MorseCodeDecoder {
+        static String decode(String morseCode) {
             // your brilliant code here, remember that you can access the preloaded Morse
             // code table through MorseCode.get(code)
 
